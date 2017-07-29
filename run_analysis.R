@@ -49,6 +49,7 @@ colnames(all) <- all_column
 
 write.csv(all, file="dataset.csv") # Write whole dataset into dataset.csv
 
+
 # --- Calculate means for all mean and std columns ---
 
 tidy <- all[grep("mean|std", names(all), value=TRUE)]
@@ -61,4 +62,5 @@ setkey(tidy.dt, subject)
 tidy.dt<-(tidy.dt[, lapply(.SD, mean), by = list(subject, test)]) # Calculate means for all specimens and activities
 tidy.dt[1:10,1:10]
 
-write.csv(tidy.dt, file="tidy.csv")
+# write.csv(tidy.dt, file="tidy.csv") # Write tidy data set in csv format
+write.table(tidy.dt, file="tidy.txt", row.names = FALSE) # Write tidy data set in csv format for submission
