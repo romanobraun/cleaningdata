@@ -1,6 +1,6 @@
 # --- define working directory ---
 getwd()
-newwd <- "DEFINE wd here!" # Insert direction containing raw data here
+newwd <- "yourwork/directory" # Insert direction containing raw data here
 setwd(newwd)
 getwd()
 
@@ -49,7 +49,6 @@ colnames(all) <- all_column
 
 write.csv(all, file="dataset.csv") # Write whole dataset into dataset.csv
 
-
 # --- Calculate means for all mean and std columns ---
 
 tidy <- all[grep("mean|std", names(all), value=TRUE)]
@@ -62,5 +61,12 @@ setkey(tidy.dt, subject)
 tidy.dt<-(tidy.dt[, lapply(.SD, mean), by = list(subject, test)]) # Calculate means for all specimens and activities
 tidy.dt[1:10,1:10]
 
-# write.csv(tidy.dt, file="tidy.csv") # Write tidy data set in csv format
-write.table(tidy.dt, file="tidy.txt", row.names = FALSE) # Write tidy data set in csv format for submission
+# --- Add activity labels ---
+labels <- read.table("activity_labels.txt") # Load labels
+# head(labels)
+#labels[,"V1"]
+tidy.dt$test <- factor(tidy.dt$test, levels = labels[, "V1"], labels = labels[, "V2"])
+# Replacing numbers with labels from the activity_labels.txt file
+
+# --- Saving tidy dataset in "tidy.txt" ---
+write.table(tidy.dt, file="tidy.txt", row.names = FALSE)
