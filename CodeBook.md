@@ -1,7 +1,43 @@
 # --- CODEBOOK ---
+Adapted from the codebook in http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-# Variables used:
-Setup:
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+
+Activities measured:
+WALKING (id = 1) : Specimen was walking
+WALKING_UPSTAIRS (2): Specimen was walking upstairs
+WALKING_DOWNSTAIRS (3): Specimen was walking downstairs
+SITTING (4): Specimen was sitting
+STANDING (5): Specimen was standing
+LAYING (6): Specimen was laying
+
+
+# --- Variables used in script run_analysis.R : ---
+# Setup:
 newwd <- Define working directory containing the dataset
 
 # Data import / handling:
