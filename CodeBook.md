@@ -35,7 +35,7 @@ Activities measured:
 * STANDING (5): Specimen was standing
 * LAYING (6): Specimen was laying
 
-# --- Variables used in script ´run_analysis.R´ : ---
+# --- Variables used in script `run_analysis.R` : ---
 ## Setup:
 * newwd <- Define working directory containing the dataset
 
