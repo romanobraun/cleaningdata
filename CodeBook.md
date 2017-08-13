@@ -23,3 +23,7 @@ all.column <- all column names including subject and test for the first two colu
 # Calculation of means, generation of tidy dataset
 tidy <- subsetting of all dataset to only contain mean and std columns
 tody.dt <- datatable of tidy
+
+# Add activity labels
+labels <- Information on performed activities from activity_labels.txt file
+
