@@ -6,10 +6,10 @@ Original files can be obtained here: http://archive.ics.uci.edu/ml/datasets/Huma
 Citation: Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013. 
 
 # Repository
-README.md: Description of project and instructions for use
-CodeBook.md: Explanation of the variables used in the code run_analysis.R
-run.analysis.R: R file providing the code to run the analysis
-tidy.txt: Output file containing the tidy data
+* `README.md`: Description of project and instructions for use
+* `CodeBook.md`: Explanation of the variables used in the code run_analysis.R
+* `run.analysis.R`: R file providing the code to run the analysis
+* `tidy.txt`: Output file containing the tidy data
 
 # Instructions
 1) Place run_analysis.R in the folder of the dataset containing the subfolders test and train.
