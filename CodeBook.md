@@ -1,6 +1,11 @@
 # CODEBOOK
 Adapted from the codebook in http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
+# IDs
+* subject: Numerical id for each specimen of the experiment
+* test: Test performed while obtaining data (see below in Activities section)
+
+## Parameters
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
@@ -22,12 +27,11 @@ These signals were used to estimate variables of the feature vector for each pat
 * fBodyGyroMag
 * fBodyGyroJerkMag
 
-The set of variables that were estimated from these signals are: 
-
+## The set of variables that were estimated from these signals are: 
 * mean(): Mean value
 * std(): Standard deviation
 
-Activities measured:
+## Activities:
 * WALKING (id = 1) : Specimen was walking
 * WALKING_UPSTAIRS (2): Specimen was walking upstairs
 * WALKING_DOWNSTAIRS (3): Specimen was walking downstairs
